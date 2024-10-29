@@ -935,8 +935,8 @@ def pipe_main():
         if individual_distances is None:
             st.warning("No line distances available yet. Please draw lines on the map to proceed.")
         else:
-            st.write(f"Individual distances: {individual_distances}")
-            st.write(f"Total distance: {total_distance} meters")
+            st.write(f"Individual distances: {individual_distances.2f}")
+            st.write(f"Total distance: {total_distance.2f} meters")
 
 
 
@@ -946,7 +946,7 @@ def pipe_main():
 
             stress_calculator(pipe_material, temperature)
             # If the user selects "Total", use the total distance for calculation
-            st.write(f"Calculating price for total distance: {total_distance} meters")
+            st.write(f"Calculating price for total distance: {total_distance.2f} meters")
             Pipe_finder(pipe_material, pressure, total_distance)
 
 
