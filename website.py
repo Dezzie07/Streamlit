@@ -725,7 +725,7 @@ def B1001_filter(P, distanceValue):
     B1001_data_dict['Pressure (bar)'] = list(map(float, B1001_data_dict['Pressure (bar)']))
 
     B1001_data_dict['Cost per m (Euro)'] = [cost / 100 for cost in B1001_data_dict['Cost per 100 m (Euro)']]
-    B1001_data_dict['Total Cost (Euro)'] = [p * distanceValue for p in B1001_data_dict['Cost per m (Euro)']]
+    B1001_data_dict['Total Cost (Euro)'] = [round(p * distanceValue, 2) for p in B1001_data_dict['Cost per m (Euro)']]
 
     available_pipes = []
     for i in range(len(B1001_data_dict['Pressure (bar)'])):
@@ -754,7 +754,7 @@ def B1003_filter(P, distanceValue):
     B1003_data_dict['Pressure (bar)'] = list(map(float, B1003_data_dict['Pressure (bar)']))
     
     B1003_data_dict['Cost per m (Euro)'] = [cost / 100 for cost in B1003_data_dict['Cost per 100 m (Euro)']]
-    B1003_data_dict['Total Cost (Euro)'] = [p * distanceValue for p in B1003_data_dict['Cost per m (Euro)']]
+    B1003_data_dict['Total Cost (Euro)'] = [round(p * distanceValue, 2) for p in B1003_data_dict['Cost per m (Euro)']]
     
     available_pipes = []
     for i in range(len(B1003_data_dict['Pressure (bar)'])):
@@ -781,7 +781,7 @@ def B1005_filter(P, distanceValue):
     B1005_data_dict['Pressure (bar)'] = list(map(float, B1005_data_dict['Pressure (bar)']))
 
     B1005_data_dict['Cost per m (Euro)'] = B1005_data_dict['Cost per m04 (Euro)']
-    B1005_data_dict['Total Cost (Euro)'] = [p * distanceValue for p in B1005_data_dict['Cost per m (Euro)']]
+    B1005_data_dict['Total Cost (Euro)'] = [round(p * distanceValue, 2) for p in B1005_data_dict['Cost per m (Euro)']]
 
     available_pipes = []
     for i in range(len(B1005_data_dict['Pressure (bar)'])):
@@ -808,7 +808,7 @@ def B10051_filter(P, distanceValue):
     B10051_data_dict['Pressure (bar)'] = list(map(float, B10051_data_dict['Pressure (bar)']))
 
     B10051_data_dict['Cost per m (Euro)'] = B10051_data_dict['Cost per m04 (Euro)']
-    B10051_data_dict['Total Cost (Euro)'] = [p * distanceValue for p in B10051_data_dict['Cost per m (Euro)']]
+    B10051_data_dict['Total Cost (Euro)'] = [round(p * distanceValue, 2) for p in B10051_data_dict['Cost per m (Euro)']]
 
     available_pipes = []
     for i in range(len(B10051_data_dict['Pressure (bar)'])):
@@ -836,7 +836,7 @@ def B1008_filter(P, distanceValue):
     B1008_data_dict['Cost per 100 m (Euro)'] = list(map(float, B1008_data_dict['Cost per 100 m (Euro)']))
 
     B1008_data_dict['Cost per m (Euro)'] = [cost / 100 for cost in B1008_data_dict['Cost per 100 m (Euro)']]
-    B1008_data_dict['Total Cost (Euro)'] = [p * distanceValue for p in B1008_data_dict['Cost per m (Euro)']]
+    B1008_data_dict['Total Cost (Euro)'] = [round(p * distanceValue, 2) for p in B1008_data_dict['Cost per m (Euro)']]
 
     available_pipes = []
     for i in range(len(B1008_data_dict['Pressure (bar)'])):
